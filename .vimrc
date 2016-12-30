@@ -69,4 +69,6 @@ set shiftwidth=2    " indent width
 set textwidth=80
 set fo+=Mm
 set expandtab       " expand tab to space
+set nofoldenable
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
