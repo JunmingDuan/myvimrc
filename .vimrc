@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=/home/jimmy/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-
+"
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
@@ -19,6 +19,15 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+
+"doxygen toolkit
+let g:DoxygenToolkit_briefTag_pre="@brief "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@return "
+let g:DoxygenToolkit_authorName="Duan Junming, duanjm@pku.edu.cn"
+let g:DoxygenToolkit_briefTag_funcName="yes"
+let g:doxygen_enhanced_color=1
 
 let g:neocomplcache_enable_at_startup = 1
 
@@ -33,6 +42,9 @@ map <F3> :TagbarToggle<CR>
 map <F4> :NERDTreeToggle<CR>
 map <C-L> <C-W><C-L>
 map <C-H> <C-W><C-H>
+map <leader>da :DoxAuthor<CR>
+map <leader>df :Dox<CR>
+map <leader>db :DoxBlock<CR>
 
 syntax on
 set background=dark
@@ -71,4 +83,5 @@ set fo+=Mm
 set expandtab       " expand tab to space
 set nofoldenable
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+
 
